@@ -3,6 +3,7 @@
     <router-link :to="{ name: 'Artikel_Pilih', params: {_id: propSidebar._id} }">
       <ul>
         <li>{{propSidebar.title}}</li>
+        <hr>
       </ul>
     </router-link>
   </div>
