@@ -5,12 +5,14 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose')
+var cors = require('cors')
 
 var index = require('./routes/index');
 var users = require('./routes/users');
 var article = require('./routes/articles')
 
 var app = express();
+app.use(cors())
 
 mongoose.connect('mongodb://localhost/hacktivpress', (err) => {
   if(err){
